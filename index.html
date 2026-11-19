@@ -4,6 +4,14 @@ body{margin:0;font-family:system-ui,sans-serif;background:#f4f7f8;color:#17212b;
 @media(max-width:600px){
  body{font-size:16px} header{padding:16px} main{margin:12px auto;padding:0 12px} .card,.hero{padding:16px;border-radius:12px;margin:12px 0} .topTabs{padding:0 8px;gap:4px;flex-wrap:wrap} .topTab{flex:1 1 30%;padding:11px 5px;font-size:.92rem;border-radius:8px} .layout{grid-template-columns:1fr;gap:10px} h2{font-size:1.25rem} h3{font-size:1.08rem;line-height:1.45} .topic{padding:14px 0} .topic .tag,.topic .status{display:inline-block;margin:3px 2px 5px 0} button{padding:12px 14px;min-height:44px;font-size:1rem} .tabs{gap:6px} .tabs button{flex:1 1 auto} input,select,textarea{font-size:16px;padding:12px} .comment,.issue{padding:12px} #detail .tabs{display:flex;flex-wrap:wrap} #detail .tabs .tab{min-width:calc(33% - 8px)} #detail .voteThread{margin-top:14px} #detail .issue .tabs button{width:100%;flex:1 1 100%} }
 @media(max-width:380px){.topTab{font-size:.82rem;padding:10px 3px}main{padding:0 8px}.card{padding:13px}#detail .tabs .tab{min-width:100%}}
+
+/* Full-width rectangular navigation tabs */
+.topTabs{max-width:none;width:100%;box-sizing:border-box;margin:0;padding:0;gap:0;display:flex;flex-wrap:nowrap;border-bottom:1px solid #dce4e8}
+.topTab{flex:1 1 0;border-radius:0;margin:0;border:0;border-right:1px solid #cbd5dc;padding:14px 8px;min-width:0}
+.topTab:last-child{border-right:0}
+.topTab.active{border-radius:0}
+@media(max-width:780px){.topTabs{max-width:none;width:100%;padding:0;gap:0;flex-wrap:nowrap}.topTab{flex:1 1 0;border-radius:0;padding:13px 5px;font-size:.92rem;min-width:0}}
+@media(max-width:380px){.topTab{font-size:.8rem;padding:11px 2px}}
 </style>
 <header><strong style='font-size:1.25rem'>○○町デジタル議会</strong></header><nav class='topTabs'><button class='topTab active' id='tabList' onclick='switchTop("list")'>議題一覧</button><button class='topTab' id='tabSubmit' onclick='switchTop("submit")'>条例提案</button><button class='topTab' id='tabReview' onclick='switchTop("review")'>審査</button></nav><main>
 
